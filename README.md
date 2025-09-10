@@ -14,6 +14,12 @@ This is a lightweight Python implementation of financial day count conventions, 
 - 5: 30/360 (ISDA)
 - 6: 30/360 (European)
 - 7: actual/365 (Japanese)
-  
+
+## Examples
+t1 = pd.to_datetime("2025-09-10")
+t2 = pd.to_datetime("2027-12-15")
+No_days = day_count(t1, t2, basis=6)
+No_years = year_count(t1, t2, basis=6)
+
 ## Reference
 https://www.mathworks.com/help/fininst/day-count-basis.html
